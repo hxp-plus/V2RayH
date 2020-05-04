@@ -356,7 +356,7 @@ namespace V2RayW
                 (mainMenu.Items[0] as MenuItem).Header = Strings.coreunloaded;
                 (mainMenu.Items[1] as MenuItem).Header = Strings.loadcore;
             }
-            for (int i = 0; i < 3; i += 1)
+            for (int i = 0; i < 2; i += 1)
             {
                 (mainMenu.Items[i + 5] as MenuItem).IsChecked = (int)proxyMode == i;
             }

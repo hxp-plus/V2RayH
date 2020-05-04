@@ -453,4 +453,7 @@ v2ray-core\geosite.dat</value>
   <data name="paclist" xml:space="preserve">
     <value>PAC 列表</value>
   </data>
+  <data name="V2RayW-hxp" xml:space="preserve">
+    <value>V2RayW (hxp修改版)</value>
+  </data>
 </root>
