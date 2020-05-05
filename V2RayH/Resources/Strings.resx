@@ -385,7 +385,9 @@
     <value>V2Ray exits unexpectedly!</value>
   </data>
   <data name="messagedircreatefail" xml:space="preserve">
-    <value>Cannot create folder(s)!</value>
+    <value>Please do not run V2RayH twice!
+Cannot create folder(s):
+</value>
   </data>
   <data name="messagedownloadfail" xml:space="preserve">
     <value>V2RayH cannot download V2Ray core!</value>
@@ -457,6 +459,9 @@ v2ray-core\geosite.dat</value>
     <value>V2RayH (hxp Edition)</value>
   </data>
   <data name="SettingsNotFound" xml:space="preserve">
-    <value>No server configuration was found. Please configure and select a server, then load core manully.</value>
+    <value>No server configuration was found. Please configure and select a server, then load core manually.</value>
+  </data>
+  <data name="runtwice" xml:space="preserve">
+    <value>V2RayH or other similar software is running. Abort.</value>
   </data>
 </root>

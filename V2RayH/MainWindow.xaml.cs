@@ -115,7 +115,7 @@ namespace V2RayH
                     Directory.CreateDirectory(AppDomain.CurrentDomain.BaseDirectory + @"log\");
                 } catch
                 {
-                    MessageBox.Show(AppDomain.CurrentDomain.BaseDirectory + @"log\", Strings.messagedircreatefail);
+                    MessageBox.Show(Strings.messagedircreatefail + AppDomain.CurrentDomain.BaseDirectory + @"log\", "Error");
                     return false;
                 }
             }
@@ -125,7 +125,7 @@ namespace V2RayH
                 File.Create(AppDomain.CurrentDomain.BaseDirectory + @"log\error.log").Close();
             } catch
             {
-                MessageBox.Show(AppDomain.CurrentDomain.BaseDirectory + "log\\access.log\n" + AppDomain.CurrentDomain.BaseDirectory + @"log\access.log", Strings.messagedircreatefail);
+                MessageBox.Show(Strings.messagedircreatefail + AppDomain.CurrentDomain.BaseDirectory + "log\\access.log\n" + AppDomain.CurrentDomain.BaseDirectory + @"log\access.log","Error" );
                 return false;
             }
             return true;
@@ -279,7 +279,6 @@ namespace V2RayH
             var settingPath = AppDomain.CurrentDomain.BaseDirectory + "settings.json";
             if (!File.Exists(settingPath))
             {
-                MessageBox.Show(Strings.SettingsNotFound);
                 WriteSettings();
             } else
             {
@@ -754,7 +753,15 @@ namespace V2RayH
         {
             listener.Prefixes.Add("http://127.0.0.1:18000/proxy.pac/");
             listener.Prefixes.Add("http://127.0.0.1:18000/config.json/");
-            listener.Start();
+            try
+            {
+                listener.Start();
+            }
+            catch
+            {
+                notifyIcon.ShowBalloonTip("", Strings.runtwice, BalloonIcon.Info);
+                Environment.Exit(1);
+            }
             httpServerWorker.WorkerSupportsCancellation = true;
             httpServerWorker.DoWork += new DoWorkEventHandler(HttpServerWorker_DoWork);
             httpServerWorker.RunWorkerAsync();

@@ -412,7 +412,9 @@ namespace V2RayH.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cannot create folder(s)!.
+        ///   Looks up a localized string similar to Please do not run V2RayH twice!
+        ///Cannot create folder(s):
+        ///.
         /// </summary>
         public static string messagedircreatefail {
             get {
@@ -781,6 +783,15 @@ namespace V2RayH.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to V2RayH or other similar software is running. Abort..
+        /// </summary>
+        public static string runtwice {
+            get {
+                return ResourceManager.GetString("runtwice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Save.
         /// </summary>
         public static string Save {
@@ -826,7 +837,7 @@ namespace V2RayH.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to No server configuration was found. Please configure and select a server, then load core manully..
+        ///   Looks up a localized string similar to No server configuration was found. Please configure and select a server, then load core manually..
         /// </summary>
         public static string SettingsNotFound {
             get {

@@ -385,7 +385,9 @@
     <value>V2Ray 意外退出！</value>
   </data>
   <data name="messagedircreatefail" xml:space="preserve">
-    <value>无法创建文件夹！</value>
+    <value>请不要运行两次V2RayH！
+无法创建文件夹：
+</value>
   </data>
   <data name="messagedownloadfail" xml:space="preserve">
     <value>V2RayH 下载 V2Ray 失败！</value>
@@ -458,5 +460,8 @@ v2ray-core\geosite.dat</value>
   </data>
   <data name="SettingsNotFound" xml:space="preserve">
     <value>没有找到任何服务器配置，请配置并选择服务器后手动加载核心。</value>
+  </data>
+  <data name="runtwice" xml:space="preserve">
+    <value>V2RayH或同类软件已经运行，程序终止。</value>
   </data>
 </root>
