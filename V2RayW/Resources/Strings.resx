@@ -193,7 +193,7 @@
     <value>Restore system proxy to original states</value>
   </data>
   <data name="routingrule" xml:space="preserve">
-    <value>V2Ray's Routing rule...</value>
+    <value>Routing (Selected Automatically)</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Save</value>

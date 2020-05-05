@@ -386,11 +386,21 @@ namespace V2RayH
             this.UpdateStatusAndModeMenus();
             if(senderTag == (int)ProxyMode.pac)
             {
+                selectedRoutingSet = 2;
                 this.UpdatePacMenuList();
+                this.UpdateRuleSetMenuList();
             }
-            if(proxyState == true)
+            if (senderTag == (int)ProxyMode.global)
+            {
+                selectedRoutingSet = 0;
+                this.UpdateRuleSetMenuList();
+                this.CoreConfigChanged();
+            }
+            if (proxyState == true)
             {
                 this.UpdateSystemProxy();
+                this.CoreConfigChanged();
+
             }
         }
 
@@ -431,12 +441,13 @@ namespace V2RayH
                 (useMultipleServer && profiles.Count + subsOutbounds.Count < 1))
             {
                 proxyState = false;
-                MessageBox.Show(Strings.SettingsNotFound,
-                    "Error",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Exclamation,
-                    MessageBoxResult.OK,
-                    MessageBoxOptions.ServiceNotification);
+                notifyIcon.ShowBalloonTip("", Strings.SettingsNotFound, BalloonIcon.Info);
+                //MessageBox.Show(Strings.SettingsNotFound,
+                //    "Error",
+                //    MessageBoxButton.YesNo,
+                //    MessageBoxImage.Exclamation,
+                //    MessageBoxResult.OK,
+                //    MessageBoxOptions.ServiceNotification);
             } else if (!useMultipleServer && selectedCusConfig == "")
             {
                 
@@ -463,7 +474,7 @@ namespace V2RayH
                 }
             }
 
-            this.CoreConfigChanged(this);
+            this.CoreConfigChanged();
 
             if (proxyState == true)
             {
@@ -723,7 +734,7 @@ namespace V2RayH
                 useCusProfile = false;
             }
             Debug.WriteLine("switch server");
-            this.CoreConfigChanged(sender);
+            this.CoreConfigChanged();
         }
 
 
@@ -839,16 +850,24 @@ namespace V2RayH
         void ToggleCore()
         {
             this.UnloadV2ray();
-            coreWorkerSemaphore.Release(1);
+            try
+            {
+                coreWorkerSemaphore.Release(1);
+            }
+            catch
+            {
+                Debug.WriteLine("Toogle Core Exception");
+            }
+            
         }
 #endregion
 
 #region core config management
         byte[] v2rayJsonConfig = new byte[0];
 
-        void CoreConfigChanged(object sender)
+        void CoreConfigChanged()
         {
-            Debug.WriteLine($"{sender} calls config change");
+            //Debug.WriteLine($"{sender} calls config change");
             if (proxyState == true)
             {
                 if(!useMultipleServer && useCusProfile)
@@ -979,16 +998,20 @@ namespace V2RayH
             int i = 0;
             foreach(Dictionary<string, object> rule in routingRuleSets)
             {
-                MenuItem menuItem = new MenuItem
+                if(i != 1)
                 {
-                    Tag = i,
-                    Header = "_" + rule["name"],
-                    IsCheckable = true,
-                    IsChecked = i == selectedRoutingSet,
-                };
-                Debug.WriteLine(menuItem.Tag.ToString());
-                menuItem.Click += SwitchRoutingRuleSet;
-                ruleSetMenuItem.Items.Add(menuItem);
+                    MenuItem menuItem = new MenuItem
+                    {
+                        Tag = i,
+                        Header = "_" + rule["name"],
+                        IsCheckable = true,
+                        IsEnabled = false,
+                        IsChecked = i == selectedRoutingSet,
+                    };
+                    Debug.WriteLine(menuItem.Tag.ToString());
+                    menuItem.Click += SwitchRoutingRuleSet;
+                    ruleSetMenuItem.Items.Add(menuItem);
+                }
                 i += 1;
             }
         }
@@ -997,7 +1020,7 @@ namespace V2RayH
         {
             selectedRoutingSet = (int)(sender as MenuItem).Tag;
             Debug.WriteLine("switch routing rule set");
-            this.CoreConfigChanged(sender);
+            //this.CoreConfigChanged(sender);
         }
 
 #endregion

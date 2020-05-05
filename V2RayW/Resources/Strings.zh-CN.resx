@@ -193,7 +193,7 @@
     <value>恢复至初始状态</value>
   </data>
   <data name="routingrule" xml:space="preserve">
-    <value>V2Ray 内部路由规则...</value>
+    <value>路由规则（自动选择）</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>保存</value>

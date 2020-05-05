@@ -700,7 +700,7 @@ namespace V2RayH.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to V2Ray&apos;s Routing rule....
+        ///   Looks up a localized string similar to Routing (Selected Automatically).
         /// </summary>
         public static string routingrule {
             get {
