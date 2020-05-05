@@ -592,7 +592,7 @@ namespace V2RayH.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to PAC Mode.
+        ///   Looks up a localized string similar to Bypass CN Mode.
         /// </summary>
         public static string pacmode {
             get {
@@ -822,6 +822,15 @@ namespace V2RayH.Resources {
         public static string ServerInfo {
             get {
                 return ResourceManager.GetString("ServerInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No server configuration was found. Please configure and select a server, then load core manully..
+        /// </summary>
+        public static string SettingsNotFound {
+            get {
+                return ResourceManager.GetString("SettingsNotFound", resourceCulture);
             }
         }
         

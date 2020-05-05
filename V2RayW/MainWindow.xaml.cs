@@ -279,6 +279,7 @@ namespace V2RayH
             var settingPath = AppDomain.CurrentDomain.BaseDirectory + "settings.json";
             if (!File.Exists(settingPath))
             {
+                MessageBox.Show(Strings.SettingsNotFound);
                 WriteSettings();
             } else
             {
@@ -396,6 +397,7 @@ namespace V2RayH
         public void OverallChanged(object sender, RoutedEventArgs e)
         {
             Debug.WriteLine("refresh all settings");
+            
             bool previousStatus = proxyState;
             if (sender == this)
             {
@@ -429,8 +431,15 @@ namespace V2RayH
                 (useMultipleServer && profiles.Count + subsOutbounds.Count < 1))
             {
                 proxyState = false;
+                MessageBox.Show(Strings.SettingsNotFound,
+                    "Error",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Exclamation,
+                    MessageBoxResult.OK,
+                    MessageBoxOptions.ServiceNotification);
             } else if (!useMultipleServer && selectedCusConfig == "")
             {
+                
                 useCusProfile = false;
             } else if (!useMultipleServer && selectedServerIndex == -1)
             {
@@ -503,8 +512,14 @@ namespace V2RayH
             RegistryKey registry = Registry.CurrentUser.OpenSubKey("Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings", true);
             if (proxyMode == ProxyMode.pac)
             {
-                registry.SetValue("ProxyEnable", 0);
-                registry.SetValue("AutoConfigURL", $"http://127.0.0.1:18000/proxy.pac/{paccounter.Next()}", RegistryValueKind.String);
+                registry.SetValue("ProxyEnable", 1);
+                var proxyServer = $"http://127.0.0.1:{httpPort}";
+                var proxyOverride = "<local>;localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;172.32.*;192.168.*";
+                registry.SetValue("ProxyServer", proxyServer);
+                registry.SetValue("ProxyOverride", proxyOverride);
+                registry.DeleteValue("AutoConfigURL", false);
+                //registry.SetValue("ProxyEnable", 0);
+                //registry.SetValue("AutoConfigURL", $"http://127.0.0.1:18000/proxy.pac/{paccounter.Next()}", RegistryValueKind.String);
             } else if (proxyMode == ProxyMode.global)
             {
                 registry.SetValue("ProxyEnable", 1);

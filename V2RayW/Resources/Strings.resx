@@ -175,7 +175,7 @@
     <value>Network:</value>
   </data>
   <data name="pacmode" xml:space="preserve">
-    <value>PAC Mode</value>
+    <value>Bypass CN Mode</value>
   </data>
   <data name="quit" xml:space="preserve">
     <value>Quit</value>
@@ -455,5 +455,8 @@ v2ray-core\geosite.dat</value>
   </data>
   <data name="V2RayH-hxp" xml:space="preserve">
     <value>V2RayH (hxp Edition)</value>
+  </data>
+  <data name="SettingsNotFound" xml:space="preserve">
+    <value>No server configuration was found. Please configure and select a server, then load core manully.</value>
   </data>
 </root>
