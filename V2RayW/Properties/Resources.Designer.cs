@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace V2RayW.Properties {
+namespace V2RayH.Properties {
     using System;
     
     
@@ -19,7 +19,7 @@ namespace V2RayW.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -39,7 +39,7 @@ namespace V2RayW.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("V2RayW.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("V2RayH.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,7 +61,7 @@ namespace V2RayW.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to var V2Ray = &quot;SOCKS5 127.0.0.1:1081; SOCKS 127.0.0.1:1081; DIRECT;&quot;;
+        ///   Looks up a localized string similar to var V2Ray = &quot;PROXY 127.0.0.1:8001; SOCKS5 127.0.0.1:1081; SOCKS 127.0.0.1:1081; DIRECT;&quot;;
         ///
         ///var domains = [
         ///	&quot;vpngate.net&quot;,
@@ -88,8 +88,6 @@ namespace V2RayW.Properties {
         ///	&quot;astrill.com&quot;,
         ///
         ///	//Design
-        ///	&quot;deviantart.com&quot;,
-        ///
         ///	 [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string simplepac {

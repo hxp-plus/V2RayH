@@ -5,9 +5,9 @@ using System.Diagnostics;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Web.Script.Serialization;
-using V2RayW.Resources;
+using V2RayH.Resources;
 
-namespace V2RayW
+namespace V2RayH
 {
     public enum ProxyMode { pac, global, manual }
 
@@ -128,7 +128,7 @@ namespace V2RayW
 
         public static Dictionary<string, object> VmessOutboundTemplate()
         {
-            return javaScriptSerializer.Deserialize<dynamic>(V2RayW.Properties.Resources.vmessjson);
+            return javaScriptSerializer.Deserialize<dynamic>(V2RayH.Properties.Resources.vmessjson);
         }
 
         public static Dictionary<string, object> outboundTemplate = new Dictionary<string, object>

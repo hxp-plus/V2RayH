@@ -14,9 +14,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
-using V2RayW.Resources;
+using V2RayH.Resources;
 
-namespace V2RayW
+namespace V2RayH
 {
     /// <summary>
     /// Interaction logic for TransportWindow.xaml

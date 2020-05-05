@@ -16,9 +16,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
-using V2RayW.Resources;
+using V2RayH.Resources;
 
-namespace V2RayW
+namespace V2RayH
 {
     /// <summary>
     /// Interaction logic for AdvancedWindow.xaml
@@ -56,8 +56,8 @@ namespace V2RayW
             }
 
             enableRestoreBox.Items.Clear();
-            enableRestoreBox.Items.Add(V2RayW.Resources.Strings.RestoreTurnOff);
-            enableRestoreBox.Items.Add(V2RayW.Resources.Strings.RestoreTurnOn);
+            enableRestoreBox.Items.Add(V2RayH.Resources.Strings.RestoreTurnOff);
+            enableRestoreBox.Items.Add(V2RayH.Resources.Strings.RestoreTurnOn);
             enableRestoreBox.SelectedIndex = configWindow.enableRestore ? 1 : 0;
 
             configScanner.DoWork += ConfigScanner_DoWork;

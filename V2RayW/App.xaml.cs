@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace V2RayW
+namespace V2RayH
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -15,7 +15,7 @@ namespace V2RayW
     {
         void App_SessionEnding(object sender, SessionEndingCancelEventArgs e)
         {
-            (MainWindow as V2RayW.MainWindow).QuitV2RayW(sender, null);
+            (MainWindow as V2RayH.MainWindow).QuitV2RayH(sender, null);
         }
     }
 

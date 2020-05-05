@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace V2RayW.Resources {
+namespace V2RayH.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace V2RayW.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("V2RayW.Resources.Strings", typeof(Strings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("V2RayH.Resources.Strings", typeof(Strings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -133,7 +133,7 @@ namespace V2RayW.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to To fully take control of the V2Ray core, directly put config files (JSON) in the config folder located at the same folder as V2RayW.exe..
+        ///   Looks up a localized string similar to To fully take control of the V2Ray core, directly put config files (JSON) in the config folder located at the same folder as V2RayH.exe..
         /// </summary>
         public static string configInstruction {
             get {
@@ -151,7 +151,7 @@ namespace V2RayW.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to V2RayW Configure.
+        ///   Looks up a localized string similar to V2RayH Configure.
         /// </summary>
         public static string configWindowName {
             get {
@@ -421,7 +421,7 @@ namespace V2RayW.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to V2RayW cannot download V2Ray core!.
+        ///   Looks up a localized string similar to V2RayH cannot download V2Ray core!.
         /// </summary>
         public static string messagedownloadfail {
             get {
@@ -430,7 +430,7 @@ namespace V2RayW.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to V2RayW is downloading V2Ray core from GitHub..
+        ///   Looks up a localized string similar to V2RayH is downloading V2Ray core from GitHub..
         /// </summary>
         public static string messagedownloading {
             get {
@@ -439,7 +439,7 @@ namespace V2RayW.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to V2RayW got V2Ray core from GitHub..
+        ///   Looks up a localized string similar to V2RayH got V2Ray core from GitHub..
         /// </summary>
         public static string messagedownloadsuccess {
             get {
@@ -457,12 +457,12 @@ namespace V2RayW.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Let V2RayW doanload V2Ray from GitHub?
-        ///“Yes”：V2RayW will try downloading V2Ray from GitHub。
+        ///   Looks up a localized string similar to Let V2RayH doanload V2Ray from GitHub?
+        ///“Yes”：V2RayH will try downloading V2Ray from GitHub。
         ///“No”：Manually download V2Ray and put files into folder v2ray-core.
-        ///“Cancel”：Quit V2RayW。
+        ///“Cancel”：Quit V2RayH。
         ///
-        ///Folder v2ray-core should be put in the same folder as V2RayW.exe. The following files should be contained in v2ray-core:
+        ///Folder v2ray-core should be put in the same folder as V2RayH.exe. The following files should be contained in v2ray-core:
         ///v2ray-core\v2ray.exe
         ///v2ray-core\v2ctl.exe
         ///v2ray-core\geoip.dat
@@ -502,7 +502,7 @@ namespace V2RayW.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to V2RayW encounters errors while reading settings..
+        ///   Looks up a localized string similar to V2RayH encounters errors while reading settings..
         /// </summary>
         public static string messagereaddefaultserror {
             get {
@@ -1006,20 +1006,20 @@ namespace V2RayW.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to V2RayH (hxp Edition).
+        /// </summary>
+        public static string V2RayH_hxp {
+            get {
+                return ResourceManager.GetString("V2RayH-hxp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to https://v2ray.com/en/index.html.
         /// </summary>
         public static string V2RayHomePage {
             get {
                 return ResourceManager.GetString("V2RayHomePage", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to V2RayW (hxp Edition).
-        /// </summary>
-        public static string V2RayW_hxp {
-            get {
-                return ResourceManager.GetString("V2RayW-hxp", resourceCulture);
             }
         }
         

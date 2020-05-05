@@ -1,7 +1,7 @@
-﻿<Application x:Class="V2RayW.App"
+﻿<Application x:Class="V2RayH.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:V2RayW"
+             xmlns:local="clr-namespace:V2RayH"
              StartupUri="MainWindow.xaml"
              SessionEnding="App_SessionEnding"
              >

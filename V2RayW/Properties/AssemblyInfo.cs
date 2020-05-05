@@ -7,11 +7,11 @@ using System.Windows;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("V2RayW")]
+[assembly: AssemblyTitle("V2RayH")]
 [assembly: AssemblyDescription("GUI for V2Ray")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Cenmrev")]
-[assembly: AssemblyProduct("V2RayW")]
+[assembly: AssemblyProduct("V2RayH")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

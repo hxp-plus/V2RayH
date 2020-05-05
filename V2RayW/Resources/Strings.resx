@@ -244,7 +244,7 @@
     <value>Config</value>
   </data>
   <data name="configWindowName" xml:space="preserve">
-    <value>V2RayW Configure</value>
+    <value>V2RayH Configure</value>
   </data>
   <data name="DNSInstruction" xml:space="preserve">
     <value>If local ports are changed, PAC files also need modifications.</value>
@@ -376,7 +376,7 @@
     <value>https://www.v2ray.com/en/configuration/overview.html</value>
   </data>
   <data name="configInstruction" xml:space="preserve">
-    <value>To fully take control of the V2Ray core, directly put config files (JSON) in the config folder located at the same folder as V2RayW.exe.</value>
+    <value>To fully take control of the V2Ray core, directly put config files (JSON) in the config folder located at the same folder as V2RayH.exe.</value>
   </data>
   <data name="coreHelppage" xml:space="preserve">
     <value>https://www.v2ray.com/en/welcome/install.html</value>
@@ -388,24 +388,24 @@
     <value>Cannot create folder(s)!</value>
   </data>
   <data name="messagedownloadfail" xml:space="preserve">
-    <value>V2RayW cannot download V2Ray core!</value>
+    <value>V2RayH cannot download V2Ray core!</value>
   </data>
   <data name="messagedownloading" xml:space="preserve">
-    <value>V2RayW is downloading V2Ray core from GitHub.</value>
+    <value>V2RayH is downloading V2Ray core from GitHub.</value>
   </data>
   <data name="messagedownloadsuccess" xml:space="preserve">
-    <value>V2RayW got V2Ray core from GitHub.</value>
+    <value>V2RayH got V2Ray core from GitHub.</value>
   </data>
   <data name="messagefilecreatefail" xml:space="preserve">
     <value>Cannot create file(s)!</value>
   </data>
   <data name="messagenocore" xml:space="preserve">
-    <value>Let V2RayW doanload V2Ray from GitHub?
-“Yes”：V2RayW will try downloading V2Ray from GitHub。
+    <value>Let V2RayH doanload V2Ray from GitHub?
+“Yes”：V2RayH will try downloading V2Ray from GitHub。
 “No”：Manually download V2Ray and put files into folder v2ray-core.
-“Cancel”：Quit V2RayW。
+“Cancel”：Quit V2RayH。
 
-Folder v2ray-core should be put in the same folder as V2RayW.exe. The following files should be contained in v2ray-core:
+Folder v2ray-core should be put in the same folder as V2RayH.exe. The following files should be contained in v2ray-core:
 v2ray-core\v2ray.exe
 v2ray-core\v2ctl.exe
 v2ray-core\geoip.dat
@@ -448,12 +448,12 @@ v2ray-core\geosite.dat</value>
     <value>No available servers.</value>
   </data>
   <data name="messagereaddefaultserror" xml:space="preserve">
-    <value>V2RayW encounters errors while reading settings.</value>
+    <value>V2RayH encounters errors while reading settings.</value>
   </data>
   <data name="paclist" xml:space="preserve">
     <value>PAC list</value>
   </data>
-  <data name="V2RayW-hxp" xml:space="preserve">
-    <value>V2RayW (hxp Edition)</value>
+  <data name="V2RayH-hxp" xml:space="preserve">
+    <value>V2RayH (hxp Edition)</value>
   </data>
 </root>

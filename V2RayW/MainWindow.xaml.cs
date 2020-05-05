@@ -24,18 +24,18 @@ using System.Diagnostics;
 using System.Threading;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using V2RayW.Resources;
+using V2RayH.Resources;
 
-namespace V2RayW
+namespace V2RayH
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        private const int pacListMenuItemIndex = 11;
-        private const int serverMenuListIndex = 9;
-        private const int routingRuleSetMenuItemIndex = 10;
+        private const int pacListMenuItemIndex = 10;
+        private const int serverMenuListIndex = 8;
+        private const int routingRuleSetMenuItemIndex = 9;
 
 
         private TaskbarIcon notifyIcon;
@@ -990,7 +990,7 @@ namespace V2RayW
 
 #region other main menu items
 
-        public void QuitV2RayW(object sender, RoutedEventArgs e)
+        public void QuitV2RayH(object sender, RoutedEventArgs e)
         {
             notifyIcon.Icon = null;
             this.UnloadV2ray();
@@ -1011,7 +1011,7 @@ namespace V2RayW
 
         private void ShowHelp(object sender, RoutedEventArgs e)
         {
-            Process.Start(V2RayW.Resources.Strings.V2RayHomePage);
+            Process.Start(V2RayH.Resources.Strings.V2RayHomePage);
         }
 
         private void ShowConfigWindow(object sender, RoutedEventArgs e)

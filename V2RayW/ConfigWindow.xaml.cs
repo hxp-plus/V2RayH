@@ -17,7 +17,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace V2RayW
+namespace V2RayH
 {
     /// <summary>
     /// Interaction logic for ConfigWindow.xaml
